@@ -42,26 +42,20 @@ python Nettack-Di.py --dataset Cora  --modelname GCN --GNNGuard True
 *Note:* Please uncomment the defense models (Line 144 for Nettack-Di.py) to test different defense models.
 
 
-## Citing
-
-If you find *GNNGuard* useful for your research, please consider citing this paper:
-```
-@inproceedings{zhang2020gnnguard,
-title     = {GNNGuard: Defending Graph Neural Networks against Adversarial Attacks},
-author    = {Zhang, Xiang and Zitnik, Marinka},
-booktitle = {NeurIPS},
-year      = {2020}
-}
-```
 
 ## Requirements 
 
 GNNGuard is tested to work under Python >=3.5. 
 
 Recent versions of Pytorch, torch-geometric, numpy, and scipy are required. All the required basic packages can be installed using the following command:
-'''
-pip install -r requirements.txt
-'''
+```bash
+pip install --no-cache-dir torch==1.8.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+pip install --no-cache-dir torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.8.0+cpu.html
+pip install --no-cache-dir torch-sparse -f https://pytorch-geometric.com/whl/torch-1.8.0+cpu.html
+pip install --no-cache-dir torch-scatter==2.0.2 -f https://pytorch-geometric.com/whl/torch-1.8.0+cpu.html
+pip install --no-cache-dir torch-cluster -f https://pytorch-geometric.com/whl/torch-1.8.0+cpu.html
+pip install --no-cache-dir torch-geometric -f https://pytorch-geometric.com/whl/torch-1.8.0+cpu.html
+```
 *Note:* For [toch-geometric](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html) and the related dependices (e.g., cluster, scatter, sparse), the higher version may work but haven't been tested yet.
 
 ### Install DeepRobust
